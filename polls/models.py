@@ -8,7 +8,8 @@ class Question(models.Model):
         return self.question_text
     
     def was_published_recently(self):
-        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)from polls.models import Choice, QuestionQuestion.objects.all()
+        ob
 
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
